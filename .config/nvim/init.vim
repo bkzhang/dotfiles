@@ -149,3 +149,30 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+" statusline
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?' '.l:branchname.' ':''
+endfunction
+
+set laststatus=2
+set statusline= 
+set statusline+=\ %f " filepath
+set statusline+=\ //
+set statusline+=%{StatuslineGit()}
+set statusline+=//
+set statusline+=\ %y " filetype
+set statusline+=\ //
+set statusline+=\ %{&fileformat}
+set statusline+=\ //
+set statusline+=\ %{&fileencoding?fileencoding:&encoding}
+set statusline+=%= " rightside
+set statusline+=%p%%
+set statusline+=\ //
+set statusline+=\ %l/%c
+set statusline+=\ 

@@ -102,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 . /Users/brianzhang/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 eval `opam config env`
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
