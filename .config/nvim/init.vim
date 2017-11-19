@@ -162,10 +162,10 @@ endfunction
 
 set laststatus=2
 set statusline= 
+set statusline+=\ %{StatuslineGit()}
+set statusline+=//
 set statusline+=\ %f " filepath
 set statusline+=\ //
-set statusline+=%{StatuslineGit()}
-set statusline+=//
 set statusline+=\ %y " filetype
 set statusline+=\ //
 set statusline+=\ %{&fileformat}
