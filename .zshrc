@@ -4,10 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/brianzhang/.oh-my-zsh
 
-# Add local 'pip' to PATH:
-# (In your .bashrc, .zshrc etc)
-PATH="${PATH}:${HOME}/.local/bin/"
-
 alias pip=pip3
 alias python=python3
 alias vi=nvim
