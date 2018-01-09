@@ -38,6 +38,9 @@ if dein#load_state('~/.cache/dein')
   " haskell
   call dein#add('neovimhaskell/haskell-vim', {'on_ft' : [ 'hs' ] })
 
+  " racket (scheme)
+  call dein#add('wlangstroth/vim-racket', {'on_ft' : [ 'rkt', 'rktl'] })
+
   " command line fuzzy finder, use :FZF in vim to start
   call dein#add('junegunn/fzf')
 
