@@ -64,7 +64,7 @@ endif
 "colorscheme one 
 "set background=dark
 colorscheme wal
-set termguicolors
+"set termguicolors " doesn't work with pywal
 
 " keep a certain number of commands and search patterns in the history
 " default in neovim is max (10000)
