@@ -5,6 +5,8 @@ set runtimepath+=~/.cache/dein/bundles/repos/github.com/Shougo/dein.vim
 set runtimepath+=~/.cache/dein/bundles/repos/github.com/Shougo/deoplete.nvim
 set runtimepath+=~/.cache/dein/bundles/repos/github.com/zchee/deoplete-jedi
 
+" to install plugings -> :call dein#install()
+" to update plugings  -> :call dein#update()
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein/bundles')
 
