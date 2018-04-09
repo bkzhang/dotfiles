@@ -104,5 +104,3 @@ source $ZSH/oh-my-zsh.sh
 eval `opam config env`
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-wal -i ~/Documents/wallpapers/joi.jpg 
