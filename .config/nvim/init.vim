@@ -92,7 +92,7 @@ set autoindent
 set expandtab
 set smartindent
 
-autocmd Filetype make setlocal noexpandtab
+autocmd Filetype make setlocal noexpandtab ts=4 sw=4 sts=4
 autocmd Filetype c setlocal ts=4 sw=4 sts=4
 autocmd Filetype cc setlocal ts=4 sw=4 sts=4
 autocmd Filetype cpp setlocal ts=4 sw=4 sts=4
