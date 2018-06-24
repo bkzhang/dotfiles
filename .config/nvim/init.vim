@@ -138,6 +138,10 @@ let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/'
 
+" configure syntastic c++ linter to enable c++17 standards
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
+
 " deoplete key config
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
