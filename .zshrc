@@ -2,12 +2,23 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/brianzhang/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+export JUNIT="$HOME/dev/junit"
+export PATH="$PATH:$JUNIT"
+export CLASSPATH="$CLASSPATH:$JUNIT/junit-4.12.jar:$JUNIT/hamcrest-core-1.3.jar"
 
 alias pip=pip3
 alias python=python3
 alias vi=nvim
 alias vim=nvim
+alias sqlite=sqlite3
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -104,3 +115,9 @@ source $ZSH/oh-my-zsh.sh
 eval `opam config env`
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brianzhang/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brianzhang/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brianzhang/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brianzhang/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

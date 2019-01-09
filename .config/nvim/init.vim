@@ -1,17 +1,17 @@
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.cache/dein/bundles/repos/github.com/Shougo/dein.vim
-set runtimepath+=~/.cache/dein/bundles/repos/github.com/Shougo/deoplete.nvim
-set runtimepath+=~/.cache/dein/bundles/repos/github.com/zchee/deoplete-jedi
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/brianzhang/dev/go/bin
+"set runtimepath+=~/.cache/dein/bundles/repos/github.com/Shougo/deoplete.nvim
 
 " to install plugings -> :call dein#install()
 " to update plugings  -> :call dein#update()
 if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein/bundles')
+  call dein#begin('~/.cache/dein')
 
-  call dein#add('~/.cache/dein/bundles/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim', {'on_i': 1})
+  call dein#add('~/.cache/dein')
+  call dein#add('Shougo/deoplete.nvim')
 
   " vim language pack, on demand loaded
   call dein#add('sheerun/vim-polyglot')
@@ -35,10 +35,16 @@ if dein#load_state('~/.cache/dein')
   call dein#add('artur-shaik/vim-javacomplete2', {'on_ft': [ 'java' ] })
 
   " go autocomplete
-  call dein#add('zchee/deoplete-go', {'build': 'make', 'on_ft': [ 'go' ] })
+  " call dein#add('zchee/deoplete-go', { 'build': 'make', 'on_ft': [ 'go' ] })
 
   " haskell
   call dein#add('neovimhaskell/haskell-vim', {'on_ft' : [ 'hs' ] })
+
+  " auto indent haskell
+  call dein#add('alx741/vim-hindent', {'on_ft' : [ 'hs' ] })
+
+  " prettify haskell  code
+  call dein#add('nbouscal/vim-stylish-haskell', {'on_ft' : [ 'hs' ] })
 
   " racket (scheme)
   call dein#add('wlangstroth/vim-racket', {'on_ft' : [ 'rkt', 'rktl'] })
